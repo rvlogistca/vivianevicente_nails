@@ -4,788 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vivi Chagas | Nail Designer</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Estilos Personalizados -->
     <style>
-        /* ==========================================
-           VARIAVEIS DE CORES
-        ========================================== */
-        :root {
-            --pink-dark: #993366;
-            --pink-medium: #cc5588;
-            --pink-light: #ee99bb;
-            --pink-neon: #ff4499;
-            --bg-black: #0a0a0a;
-            --bg-dark: #1a1a1a;
-            --text-white: #ffffff;
-            --text-gray: #cccccc;
-        }
-
-        /* ==========================================
-           ESTILOS GERAIS
-        ========================================== */
         * {
+<AGENDAR PELO WHATSAPP</a>https://wa.me/5569993858055
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--text-white);
-            background-color: var(--bg-black);
-        }
-
-        /* ==========================================
-           NAVBAR
-        ========================================== */
-        .navbar {
-            background: rgba(10, 10, 10, 0.95);
-            box-shadow: 0 4px 20px rgba(153, 51, 102, 0.3);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(153, 51, 102, 0.3);
-        }
-
-        .navbar-brand {
-            font-weight: 700;
-            color: var(--pink-neon) !important;
-            font-size: 1.6rem;
-            letter-spacing: 1px;
-            text-shadow: 0 0 10px rgba(255, 68, 153, 0.5);
-        }
-
-        .nav-link {
-            color: var(--text-white) !important;
-            font-weight: 500;
-            margin: 0 10px;
-            transition: all 0.3s;
-            position: relative;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: var(--pink-neon);
-            transition: all 0.3s;
-            transform: translateX(-50%);
-        }
-
-        .nav-link:hover {
-            color: var(--pink-neon) !important;
-            text-shadow: 0 0 8px rgba(255, 68, 153, 0.6);
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        /* ==========================================
-           SEÇÃO HERO (INÍCIO)
-        ========================================== */
-        .hero {
-            background: linear-gradient(135deg, var(--bg-black) 0%, var(--bg-dark) 50%, rgba(153, 51, 102, 0.15) 100%);
+            background: linear-gradient(135deg, #2b001a 0%, #4a0030 50%, #1a0010 100%);
             min-height: 100vh;
+            color: white;
+        }
+
+        .crown {
+            text-align: center;
+            padding-top: 30px;
+            font-size: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
             display: flex;
             align-items: center;
-            padding-top: 80px;
-            position: relative;
-            overflow: hidden;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
-        .hero::before,
-        .hero::after {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
-            animation: pulse 4s ease-in-out infinite;
+        .texto {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
         }
 
-        .hero::before {
-            top: -30%;
-            right: -10%;
-            width: 700px;
-            height: 700px;
-            background: radial-gradient(circle, rgba(153, 51, 102, 0.25) 0%, transparent 70%);
-        }
-
-        .hero::after {
-            bottom: -20%;
-            left: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(204, 85, 136, 0.15) 0%, transparent 60%);
-            animation-delay: 2s;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 0.6; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.1); }
-        }
-
-        .hero h1 {
+        h1 {
             font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
+            color: #ffd7e8;
             line-height: 1.2;
-            text-shadow: 0 0 30px rgba(255, 68, 153, 0.3);
+            margin-bottom: 10px;
         }
 
-        .hero h1 span {
-            background: linear-gradient(90deg, var(--pink-dark), var(--pink-neon));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #f8c8dc;
             margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1rem;
             line-height: 1.8;
-            color: var(--text-gray);
-        }
-
-        .profile-img {
-            width: 320px;
-            height: 320px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--pink-neon);
-            box-shadow: 
-                0 0 30px rgba(255, 68, 153, 0.6),
-                0 0 60px rgba(153, 51, 102, 0.4),
-                inset 0 0 20px rgba(255, 255, 255, 0.1);
-            transition: all 0.5s ease;
-        }
-
-        .profile-img:hover {
-            transform: scale(1.05) rotate(2deg);
-            box-shadow: 
-                0 0 40px rgba(255, 68, 153, 0.8),
-                0 0 80px rgba(153, 51, 102, 0.6),
-                inset 0 0 30px rgba(255, 255, 255, 0.15);
-        }
-
-        /* ==========================================
-           BOTÕES
-        ========================================== */
-        .btn-primary-custom {
-            background: linear-gradient(135deg, var(--pink-dark), var(--pink-medium));
-            border: 1px solid rgba(255, 68, 153, 0.5);
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            border-radius: 50px;
-            color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(153, 51, 102, 0.4);
-        }
-
-        .btn-primary-custom:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(153, 51, 102, 0.6);
-            color: white;
+            color: #f0d9e3;
+            margin-bottom: 40px;
+            max-width: 400px;
         }
 
         .btn-whatsapp {
-            background: linear-gradient(135deg, #25D366, #128c7e);
-            border: none;
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            border-radius: 50px;
+            display: inline-block;
+            background: linear-gradient(90deg, #ff4da6, #ff66b3);
             color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            box-shadow: 0 4px 20px rgba(255, 77, 166, 0.4);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
         }
 
         .btn-whatsapp:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
-            color: white;
         }
 
-        /* ==========================================
-           TÍTULOS DE SEÇÃO
-        ========================================== */
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            position: relative;
-            display: inline-block;
-            text-shadow: 0 0 20px rgba(255, 68, 153, 0.3);
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--pink-dark), var(--pink-neon));
-            border-radius: 2px;
-            box-shadow: 0 0 10px rgba(255, 68, 153, 0.5);
-        }
-
-        .section-title p {
-            color: var(--text-gray);
-            margin-top: 25px;
-            font-size: 1.1rem;
-        }
-
-        /* ==========================================
-           SEÇÃO SERVIÇOS
-        ========================================== */
-        .services {
-            padding: 100px 0;
-            background: var(--bg-black);
-        }
-
-        .service-card {
-            background: linear-gradient(145deg, var(--bg-dark), #111);
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
-            text-align: center;
-            transition: all 0.4s ease;
-            height: 100%;
-            border: 1px solid rgba(153, 51, 102, 0.2);
-        }
-
-        .service-card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.6), 0 0 30px rgba(153, 51, 102, 0.3);
-            border-color: var(--pink-neon);
-        }
-
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--pink-dark), var(--pink-medium));
-            border-radius: 50%;
+        .instagram {
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            font-size: 2rem;
-            color: white;
-            box-shadow: 0 4px 15px rgba(153, 51, 102, 0.5);
-        }
-
-        .service-card h3 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--pink-light);
-        }
-
-        .service-card p {
-            color: var(--text-gray);
-            line-height: 1.7;
-        }
-
-        /* ==========================================
-           SEÇÃO GALERIA
-        ========================================== */
-        .gallery {
-            padding: 100px 0;
-            background: linear-gradient(180deg, var(--bg-black), var(--bg-dark));
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            transition: all 0.4s ease;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.03);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(153, 51, 102, 0.3);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(153, 51, 102, 0.9), rgba(204, 85, 136, 0.85));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        .gallery-overlay span {
-            color: white;
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-
-        /* ==========================================
-           SEÇÃO SOBRE
-        ========================================== */
-        .about {
-            padding: 100px 0;
-            background: var(--bg-black);
-        }
-
-        .about-img {
-            border-radius: 50%;
-            box-shadow: 
-                0 15px 50px rgba(0, 0, 0, 0.6),
-                0 0 40px rgba(153, 51, 102, 0.3),
-                inset 0 0 0 6px rgba(153, 51, 102, 0.5);
-            width: 100%;
-            max-width: 420px;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto;
-            transition: all 0.5s ease;
-        }
-
-        .about-img:hover {
-            transform: rotate(3deg) scale(1.02);
-            box-shadow: 
-                0 20px 60px rgba(0, 0, 0, 0.7),
-                0 0 60px rgba(153, 51, 102, 0.5),
-                inset 0 0 0 6px rgba(255, 68, 153, 0.7);
-        }
-
-        .about h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 25px;
-            color: var(--pink-light);
-        }
-
-        .about p {
-            color: var(--text-gray);
-            line-height: 1.8;
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-        }
-
-        .about-list {
-            list-style: none;
-            padding: 0;
-            margin: 30px 0;
-        }
-
-        .about-list li {
-            padding: 12px 0;
-            display: flex;
-            align-items: center;
-            color: var(--text-gray);
-            font-size: 1.05rem;
-        }
-
-        .about-list li i {
-            color: var(--pink-neon);
-            margin-right: 15px;
-            font-size: 1.2rem;
-        }
-
-        /* ==========================================
-           SEÇÃO CONTATO
-        ========================================== */
-        .contact {
-            padding: 100px 0;
-            background: var(--bg-black);
-        }
-
-        .contact-card {
-            background: linear-gradient(145deg, var(--pink-dark), #7a2850);
-            border-radius: 25px;
-            padding: 50px;
-            color: white;
-            text-align: center;
-            box-shadow: 0 15px 40px rgba(153, 51, 102, 0.5);
-        }
-
-        .contact-card h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .contact-card p {
-            font-size: 1.15rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 1.1rem;
-        }
-
-        /* ==========================================
-           RODAPÉ
-        ========================================== */
-        .footer {
-            background: #050505;
-            color: white;
-            padding: 60px 0 30px;
-            border-top: 1px solid rgba(153, 51, 102, 0.2);
-        }
-
-        .footer h5 {
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: var(--pink-neon);
-        }
-
-        .footer p, .footer a {
-            color: #777;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .footer a:hover {
-            color: var(--pink-light);
-        }
-
-        .social-links a {
-            display: inline-flex;
-            width: 44px;
-            height: 44px;
-            background: rgba(153, 51, 102, 0.2);
-            border-radius: 50%;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
-            transition: all 0.3s ease;
-            color: var(--pink-light);
-        }
-
-        .social-links a:hover {
-            background: var(--pink-neon);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 40px;
-            padding-top: 25px;
-            text-align: center;
-            color: #555;
+            gap: 10px;
+            color: #f8c8dc;
             font-size: 0.95rem;
         }
 
-        /* ==========================================
-           BOTÃO WHATSAPP FLUTUANTE
-        ========================================== */
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 65px;
-            height: 65px;
-            background: linear-gradient(135deg, #25D366, #128c7e);
-            border-radius: 50%;
+        .imagem-container {
+            flex: 1;
+            min-width: 300px;
             display: flex;
-            align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.9rem;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            animation: float 3s ease-in-out infinite;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+        .imagem-wrapper {
+            position: relative;
         }
 
-        .floating-whatsapp:hover {
-            transform: scale(1.15);
-            animation: none;
-            color: white;
+        .imagem-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff4da6, #b30059);
+            opacity: 0.3;
+            filter: blur(20px);
+            z-index: 0;
         }
 
-        /* ==========================================
-           RESPONSIVIDADE (CELULAR)
-        ========================================== */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.3rem; }
-            .section-title h2 { font-size: 2rem; }
-            .contact-card { padding: 35px 25px; }
-            .contact-info { flex-direction: column; gap: 20px; }
-            .profile-img { width: 260px; height: 260px; }
+        .imagem-wrapper img {
+            position: relative;
+            z-index: 1;
+            border-radius: 50%;
+            width: 380px;
+            height: 380px;
+            object-fit: cover;
+            border: 8px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .texto {
+                padding-right: 0;
+                margin-top: 40px;
+            }
+            p {
+                margin: 0 auto 40px;
+            }
+            .instagram {
+                justify-content: center;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="crown">👑</div>
 
-    <!-- ==========================================
-        BOTÃO WHATSAPP FLUTUANTE
-    ========================================== -->
-    <a href="https://wa.me/5569993858055?text=Olá%20Vivi!%20Gostaria%20de%20agendar%20um%20horário" 
-       class="floating-whatsapp" target="_blank" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- ==========================================
-        BARRA DE NAVEGAÇÃO
-    ========================================== -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">
-                <i class="fas fa-spa me-2"></i>Vivi Chagas
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-                </ul>
+    <div class="container">
+        <div class="texto">
+            <h1>Vivi Chagas</h1>
+            <h2>NAIL DESIGNER</h2>
+            <p>Banho de gel e alongamentos de unhas personalizadas. Resistência e elegância em cada detalhe.</p>
+            
+            <AGENDAR PELO WHATSAPP</a>="https://wa.me/5569993858055" target="_blank" class="btn-whatsapp">📅 AGENDAR PELO WHATSAPP</a>
+            
+            <div class="instagram">
+                <span>📷</span>
+                <span>@vivianevicente.nails</span>
             </div>
         </div>
-    </nav>
 
-    <!-- ==========================================
-        SEÇÃO: INÍCIO / HERO
-    ========================================== -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 text-center mb-5 mb-lg-0">
-                    <img src="foto1.jpg" alt="Vivi Chagas - Nail Designer" class="profile-img mb-4">
-                </div>
-                <div class="col-lg-7">
-                    <h1>Unhas perfeitas que <span>realçam</span> sua beleza</h1>
-                    <p>Especialista em alongamentos de unhas com gel, fibra de vidro e nail art exclusiva. Técnicas modernas, materiais de alta qualidade e um atendimento acolhedor para você se sentir ainda mais confiante.</p>
-                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                        <a href="#contato" class="btn btn-primary-custom">Agendar Horário</a>
-                        <a href="https://wa.me/5569993858055?text=Olá%20Vivi!%20Gostaria%20de%20agendar%20um%20horário" 
-                           class="btn btn-whatsapp" target="_blank">
-                            <i class="fab fa-whatsapp me-2"></i>WhatsApp
-                        </a>
-                    </div>
-                </div>
+        <div class="imagem-container">
+            <div class="imagem-wrapper">
+                <img src="foto1.png" alt="Vivi Chagas - Nail Designer">
             </div>
         </div>
-    </section>
-
-    <!-- ==========================================
-        SEÇÃO: SERVIÇOS
-    ========================================== -->
-    <section class="services" id="servicos">
-        <div class="container">
-            <div class="section-title">
-                <h2>Meus Serviços</h2>
-                <p>Qualidade e cuidado em cada detalhe para suas mãos</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-hand"></i></div>
-                        <h3>Banho de Gel</h3>
-                        <p>Proteção e brilho intenso que duram semanas. Fortalece suas unhas naturais.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-ruler-combined"></i></div>
-                        <h3>Alongamento</h3>
-                        <p>Alongamentos em gel e fibra de vidro no tamanho e formato que você desejar.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-palette"></i></div>
-                        <h3>Nail Art</h3>
-                        <p>Desenhos, decorações e estampas exclusivas para unhas únicas e cheias de estilo.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-spa"></i></div>
-                        <h3>Manutenção</h3>
-                        <p>Reparo e retoque para manter suas unhas sempre lindas e perfeitas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-        SEÇÃO: GALERIA
-    ========================================== -->
-    <section class="gallery" id="galeria">
-        <div class="container">
-            <div class="section-title">
-                <h2>Galeria de Trabalhos</h2>
-                <p>Confira alguns dos meus trabalhos ✨</p>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="foto1.jpg" alt="Unhas Naturais">
-                        <div class="gallery-overlay"><span>💅 Natural & Perfeita</span></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="foto2.jpg" alt="Unhas Vermelho Francês">
-                        <div class="gallery-overlay"><span>❤️ Vermelho Elegância</span></div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="gallery-item">
-                        <img src="foto3.jpg" alt="Unhas Cinza">
-                        <div class="gallery-overlay"><span>🩶 Cinza Sofisticação</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-        SEÇÃO: SOBRE MIM
-    ========================================== -->
-    <section class="about" id="sobre">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 mb-5 mb-lg-0">
-                    <img src="foto1.jpg" alt="Vivi Chagas" class="about-img">
-                </div>
-                <div class="col-lg-7">
-                    <h3>Sobre mim</h3>
-                    <p>Olá! Sou a Vivi Chagas, uma Nail Designer apaixonada por transformar unhas em verdadeiras obras de arte. 💖</p>
-                    <p>Especializada em banho de gel, alongamentos e nail art, atendo em Nova Mamoré - RO com muito carinho e dedicação. Cada cliente é especial, e cada unha conta uma história de beleza e cuidado.</p>
-                    <ul class="about-list">
-                        <li><i class="fas fa-check-circle"></i> Materiais de alta qualidade</li>
-                        <li><i class="fas fa-check-circle"></i> Técnicas atualizadas e seguras</li>
-                        <li><i class="fas fa-check-circle"></i> Atendimento personalizado</li>
-                        <li><i class="fas fa-check-circle"></i> Resultados que duram</li>
-                    </ul>
-                    <a href="https://instagram.com/vivianevicente" target="_blank" class="btn btn-primary-custom">
-                        <i class="fab fa-instagram me-2"></i>Seguir no Instagram
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-        SEÇÃO: CONTATO
-    ========================================== -->
-    <section class="contact" id="contato">
-        <div class="container">
-            <div class="contact-card">
-                <h2>Agende seu Horário 💅</h2>
-                <p>Não perca tempo! Garanta seu horário e deixe suas mãos ainda mais bonitas.</p>
-                <a href="https://wa.me/5569993858055?text=Olá%20Vivi!%20Gostaria%20de%20agendar%20um%20horário" 
-                   class="btn btn-light btn-lg" target="_blank">
-                    <i class="fab fa-whatsapp me-2"></i>AGENDAR PELO WHATSAPP
-                </a>
-                <div class="contact-info">
-                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Nova Mamoré - RO</div>
-                    <div class="contact-item"><i class="fas fa-clock"></i> Seg a Sáb — Com hora marcada</div>
-                    <div class="contact-item"><i class="fab fa-whatsapp"></i> (69) 99385-8055</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
-        RODAPÉ
-    ========================================== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h5><i class="fas fa-spa me-2"></i>Vivi Chagas</h5>
-                    <p>Nail Designer especializada em alongamentos e nail art. Beleza e elegância nas suas mãos.</p>
-                </div>
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h5>Links Rápidos</h5>
-                    <p><a href="#home">Início</a></p>
-                    <p><a href="#servicos">Serviços</a></p>
-                    <p><a href="#galeria">Galeria</a></p>
-                    <p><a href="#contato">Contato</a></p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Redes Sociais</h5>
-                    <div class="social-links">
-                        <a href="https://instagram.com/vivianevicente" target="_blank" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://wa.me/5569993858055" target="_blank" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>© 2026 Vivi Chagas — Nail Designer. Todos os direitos reservados.</p>
-                <p>Feito com 💖 em Nova Mamoré - RO</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ==========================================
-        SCRIPTS
-    ========================================== -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
 </body>
 </html>
