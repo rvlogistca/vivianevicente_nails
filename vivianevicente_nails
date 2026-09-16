@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivi Chagas | Nail Designer — Alongamentos de Unhas</title>
+    <meta name="description" content="Vivi Chagas - Nail Designer especializada em alongamentos de unhas, gel, fibra de vidro e nail art. Beleza e elegância nas suas mãos.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --rose: #f8c8dc;
+            --rose-dark: #d48fa8;
+            --gold: #d4af37;
+            --white: #ffffff;
+            --dark: #2c2c2c;
+            --light-pink: #fdf2f7;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark);
+            background-color: var(--white);
+        }
+        
+        .navbar {
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            backdrop-filter: blur(10px);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--rose-dark) !important;
+            font-size: 1.6rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-link {
+            color: var(--dark) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--rose-dark) !important;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--light-pink) 0%, var(--rose) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            color: var(--rose-dark);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--rose-dark), var(--rose));
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212, 143, 168, 0.4);
+            color: white;
+        }
+        
+        .btn-whatsapp {
+            background: #25D366;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--rose-dark), var(--gold));
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: #666;
+            margin-top: 25px;
+            font-size: 1.1rem;
+        }
+        
+        .services {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            border: 1px solid rgba(248,200,220,0.3);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(212, 143, 168, 0.15);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--rose), var(--rose-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .service-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .gallery {
+            padding: 100px 0;
+            background: var(--light-pink);
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(212, 143, 168, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-overlay span {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .about {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .about-img {
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .about h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--dark);
+        }
+        
+        .about p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        
+        .about-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+        
+        .about-list li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            color: #555;
+        }
+        
+        .about-list li i {
+            color: var(--rose-dark);
+            margin-right: 12px;
+            font-size: 1.1rem;
+        }
+        
+        .testimonials {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--light-pink) 0%, #fff 100%);
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            height: 100%;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--rose);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .testimonial-author strong {
+            display: block;
+            color: var(--dark);
+        }
+        
+        .testimonial-author span {
+            font-size: 0.9rem;
+            color: #888;
+        }
+        
+        .stars {
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+        
+        .contact {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .contact-card {
+            background: linear-gradient(135deg, var(--rose-dark), var(--rose));
+            border-radius: 25px;
+            padding: 50px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(212, 143, 168, 0.3);
+        }
+        
+        .contact-card h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .contact-card p {
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-item i {
+            font-size: 1.4rem;
+        }
+        
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 30px;
+        }
+        
+        .footer h5 {
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--rose);
+        }
+        
+        .footer p, .footer a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer a:hover {
+            color: var(--rose);
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            width: 42px;
+            height: 42px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            transition: background 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--rose-dark);
+            color: white;
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+            padding-top: 25px;
+            text-align: center;
+            color: #999;
+            font-size: 0.95rem;
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 25px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+        
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-card {
+                padding: 35px 25px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-spa me-2"></i>Vivi Chagas
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1>Unhas perfeitas que <span>realçam</span> sua beleza</h1>
+                    <p>Especialista em alongamentos de unhas com gel, fibra de vidro e nail art exclusiva. Técnicas modernas, materiais de alta qualidade e um atendimento acolhedor para você se sentir ainda mais confiante.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#contato" class="btn btn-primary-custom">Agendar Horário</a>
+                        <a href="https://wa.me/5511999999999?text=Olá%20Vivi!%20Gostaria%20de%20agendar%20um%20horário" class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block text-center">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop" alt="Unhas elegantes" class="img-fluid rounded-4 shadow-lg" style="max-height: 500px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meus Serviços</h2>
+                <p>Cuidados profissionais para unhas impecáveis e duradouras</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-gem"></i></div>
+                        <h3>Alongamento em Gel</h3>
+                        <p>Unhas alongadas com gel de alta resistência, acabamento natural e brilho impecável. Ideal para quem busca elegância e durabilidade.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-hand-sparkles"></i></div>
+                        <h3>Fibra de Vidro</h3>
+                        <p>Técnica reforçada com fibra de vidro para unhas mais resistentes e naturais. Perfeita para quem precisa de força extra no dia a dia.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+                        <h3>Nail Art</h3>
+                        <p>Designs exclusivos, francesinha, glitter, pedrarias e desenhos personalizados. Sua criatividade vira arte nas unhas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-spa"></i></div>
+                        <h3>Manutenção & Spa</h3>
+                        <p>Manutenção de alongamentos, esmaltação em gel, hidratação e cuidados completos para manter suas unhas sempre lindas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="gallery" id="galeria">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeria de Trabalhos</h2>
+                <p>Alguns dos resultados que encantam minhas clientes</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=300&fit=crop" alt="Alongamento rosa">
+                        <div class="gallery-overlay"><span>Alongamento Gel</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=400&h=300&fit=crop" alt="Nail art">
+                        <div class="gallery-overlay"><span>Nail Art</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=400&h=300&fit=crop" alt="Francesinha">
+                        <div class="gallery-overlay"><span>Francesinha</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e22?w=400&h=300&fit=crop" alt="Unhas douradas">
+                        <div class="gallery-overlay"><span>Efeito Glitter</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1610992015732-2449b7637bc1?w=400&h=300&fit=crop" alt="Unhas nude">
+                        <div class="gallery-overlay"><span>Estilo Nude</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=300&fit=crop" alt="Decoração">
+                        <div class="gallery-overlay"><span>Decoração</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=500&h=600&fit=crop" alt="Vivi Chagas" class="about-img">
+                </div>
+                <div class="col-lg-7">
+                    <h3>Olá, eu sou a Vivi Chagas</h3>
+                    <p>Nail Designer apaixonada por transformar unhas em verdadeiras obras de arte. Com anos de experiência e formação contínua nas técnicas mais modernas do mercado, meu objetivo é proporcionar não só beleza, mas também confiança e bem-estar para cada cliente.</p>
+                    <p>Trabalho com materiais de alta qualidade, técnicas seguras e um atendimento personalizado. Cada unha é pensada especialmente para o seu estilo de vida e preferências.</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check-circle"></i> Técnicas atualizadas e certificadas</li>
+                        <li><i class="fas fa-check-circle"></i> Materiais premium e hipoalergênicos</li>
+                        <li><i class="fas fa-check-circle"></i> Ambiente acolhedor e higienizado</li>
+                        <li><i class="fas fa-check-circle"></i> Atendimento personalizado</li>
+                    </ul>
+                    <a href="#contato" class="btn btn-primary-custom">Quero agendar com a Vivi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section-title">
+                <h2>O que dizem minhas clientes</h2>
+                <p>Depoimentos reais de quem já experimentou o cuidado Vivi Chagas</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">As unhas mais lindas que já tive! A Vivi tem um cuidado especial e o alongamento durou muito mais do que eu esperava. Super recomendo!</p>
+                        <div class="testimonial-author">
+                            <div>
+                                <strong>Amanda R.</strong>
+                                <span>Cliente desde 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">Profissional incrível! Atendimento impecável, ambiente aconchegante e o resultado sempre supera as expectativas. Virei cliente fiel.</p>
+                        <div class="testimonial-author">
+                            <div>
+                                <strong>Juliana M.</strong>
+                                <span>Cliente desde 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">Amei a nail art que a Vivi criou pra mim. Ela realmente escuta o que a gente quer e transforma em algo ainda mais bonito. Nota 10!</p>
+                        <div class="testimonial-author">
+                            <div>
+                                <strong>Camila S.</strong>
+                                <span>Cliente desde 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="contact-card">
+                <h2>Pronta para ter unhas dos sonhos?</h2>
+                <p>Agende seu horário agora mesmo e garanta um atendimento exclusivo. Estou te esperando!</p>
+                <a href="https://wa.me/5511999999999?text=Olá%20Vivi!%20Gostaria%20de%20agendar%20um%20horário%20para%20alongamento%20de%20unhas" class="btn btn-light btn-lg px-5 py-3 rounded-pill fw-bold" target="_blank" style="color: #25D366;">
+                    <i class="fab fa-whatsapp me-2"></i>Agendar pelo WhatsApp
+                </a>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>São Paulo - SP</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Seg a Sáb: 9h às 19h</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <span>@vivichagas.nails</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-spa me-2"></i>Vivi Chagas</h5>
+                    <p>Nail Designer especializada em alongamentos de unhas, gel, fibra de vidro e nail art. Beleza, cuidado e elegância em cada detalhe.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Links Rápidos</h5>
+                    <p><a href="#home">Início</a></p>
+                    <p><a href="#servicos">Serviços</a></p>
+                    <p><a href="#galeria">Galeria</a></p>
+                    <p><a href="#sobre">Sobre</a></p>
+                    <p><a href="#contato">Contato</a></p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Redes Sociais</h5>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5511999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <p class="mt-3">Atendimento com hora marcada</p>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2026 Vivi Chagas Nail Designer. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/5511999999999?text=Olá%20Vivi!%20Gostaria%20de%20agendar%20um%20horário" class="floating-whatsapp" target="_blank" title="Fale comigo no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
