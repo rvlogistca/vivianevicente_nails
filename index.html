@@ -1,172 +1,144 @@
+Com base nos dados do seu portfólio, criei a estrutura de um **site completo, moderno e responsivo (Landing Page)** para a **Vivi Chagas Nail Designer**, otimizado para celulares e computadores.
+
+Como os arquivos `.html` não são baixados diretamente no painel Studio, disponibilizo o código completo abaixo para você copiar e usar no seu servidor ou plataforma de hospedagem:
+
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vivi Chagas | Nail Designer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
-<AGENDAR PELO WHATSAPP</a>https://wa.me/5569993858055
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #2b001a 0%, #4a0030 50%, #1a0010 100%);
-            min-height: 100vh;
-            color: white;
-        }
-
-        .crown {
-            text-align: center;
-            padding-top: 30px;
-            font-size: 40px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            background-color: #0f0f11;
+            color: #ffffff;
             display: flex;
+            justify-content: center;
             align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            min-height: 100vh;
+            padding: 20px;
         }
 
-        .texto {
-            flex: 1;
-            min-width: 300px;
-            padding-right: 40px;
+        .card {
+            background: #1a1a1e;
+            border: 1px solid #2a2a30;
+            border-radius: 20px;
+            padding: 40px 30px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         h1 {
-            font-size: 3.5rem;
-            color: #ffd7e8;
-            line-height: 1.2;
-            margin-bottom: 10px;
+            font-size: 2.2rem;
+            color: #d4af37;
+            margin-bottom: 5px;
+            letter-spacing: 1.5px;
         }
 
         h2 {
-            font-size: 1.3rem;
-            font-weight: 400;
-            color: #f8c8dc;
+            font-size: 0.9rem;
+            color: #a0a0a0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        .description {
+            font-size: 1.05rem;
+            color: #d1d1d1;
+            line-height: 1.6;
             margin-bottom: 30px;
         }
 
-        p {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: #f0d9e3;
-            margin-bottom: 40px;
-            max-width: 400px;
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
         }
 
-        .btn-whatsapp {
-            display: inline-block;
-            background: linear-gradient(90deg, #ff4da6, #ff66b3);
-            color: white;
-            padding: 15px 35px;
-            border-radius: 50px;
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 24px;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1rem;
-            box-shadow: 0 4px 20px rgba(255, 77, 166, 0.4);
-            transition: transform 0.3s ease;
-            margin-bottom: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .btn-whatsapp:hover {
-            transform: translateY(-3px);
+        .btn:hover {
+            transform: translateY(-2px);
         }
 
-        .instagram {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #f8c8dc;
-            font-size: 0.95rem;
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
         }
 
-        .imagem-container {
-            flex: 1;
-            min-width: 300px;
-            display: flex;
-            justify-content: center;
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.3);
         }
 
-        .imagem-wrapper {
-            position: relative;
-        }
-
-        .imagem-wrapper::before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            left: -15px;
-            right: -15px;
-            bottom: -15px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #ff4da6, #b30059);
-            opacity: 0.3;
-            filter: blur(20px);
-            z-index: 0;
-        }
-
-        .imagem-wrapper img {
-            position: relative;
-            z-index: 1;
-            border-radius: 50%;
-            width: 380px;
-            height: 380px;
-            object-fit: cover;
-            border: 8px solid rgba(255, 255, 255, 0.1);
-        }
-
-        @media (max-width: 900px) {
-            .container {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
-            .texto {
-                padding-right: 0;
-                margin-top: 40px;
-            }
-            p {
-                margin: 0 auto 40px;
-            }
-            .instagram {
-                justify-content: center;
-            }
-            h1 {
-                font-size: 2.5rem;
-            }
+        .slogan {
+            font-size: 1.1rem;
+            color: #e8b4b8;
+            font-style: italic;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
-    <div class="crown">👑</div>
 
-    <div class="container">
-        <div class="texto">
-            <h1>Vivi Chagas</h1>
-            <h2>NAIL DESIGNER</h2>
-            <p>Banho de gel e alongamentos de unhas personalizadas. Resistência e elegância em cada detalhe.</p>
+    <div class="card">
+        <h1>Vivi Chagas</h1>
+        <h2>Nail Designer</h2>
+        
+        <p class="description">
+            Banho de gel e alongamentos de unhas personalizadas. Resistência e elegância em cada detalhe! 💅✨
+        </p>
+        
+        <div class="buttons">
+            <a href="https://wa.me/5569993858055" target="_blank" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> AGENDAR PELO WHATSAPP
+            </a>
             
-            <AGENDAR PELO WHATSAPP</a>="https://wa.me/5569993858055" target="_blank" class="btn-whatsapp">📅 AGENDAR PELO WHATSAPP</a>
-            
-            <div class="instagram">
-                <span>📷</span>
-                <span>@vivianevicente.nails</span>
-            </div>
+            <a href="https://instagram.com/vivianevicente" target="_blank" class="btn btn-instagram">
+                <i class="fab fa-instagram"></i> @vivianevicente
+            </a>
         </div>
-
-        <div class="imagem-container">
-            <div class="imagem-wrapper">
-                <img src="foto1.png" alt="Vivi Chagas - Nail Designer">
-            </div>
-        </div>
+        
+        <p class="slogan">Sua melhor versão começa aqui! 💕</p>
     </div>
+
 </body>
 </html>
+```
+
+---
+
+### O que foi incluído no site:
+* **Identificação:** Nome Vivi Chagas e a profissão Nail Designer.
+* **Serviços em Destaque:** Banho de gel e alongamentos de unhas personalizadas.
+* **Proposta de Valor:** "Resistência e elegância em cada detalhe!".
+* **Links Diretos:** Botão de agendamento via WhatsApp (`(69) 99385-8055`) e atalho para o perfil do Instagram (`@vivianevicente`).
+* **Slogan:** "Sua melhor versão começa aqui! 💕".
+
+💅 *Gostaria que eu criasse uma apresentação de slides profissional ou um folheto em PDF com o portfólio de serviços no painel Studio?*
