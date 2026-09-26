@@ -1,140 +1,637 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivi Chagas | Nail Designer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
 
-        body {
-            background-color: #0f0f11;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    >
 
-        .card {
-            background: #1a1a1e;
-            border: 1px solid #2a2a30;
-            border-radius: 20px;
-            padding: 40px 30px;
-            max-width: 480px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
+    <meta
+        name="description"
+        content="Érika Silva — Beleza & Progressiva. Cabelos mais lisos, saudáveis, alinhados e cheios de brilho."
+    >
 
-        h1 {
-            font-size: 2.2rem;
-            color: #d4af37;
-            margin-bottom: 5px;
-            letter-spacing: 1.5px;
-        }
+    <meta name="theme-color" content="#08070a">
 
-        h2 {
-            font-size: 0.9rem;
-            color: #a0a0a0;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 25px;
-        }
+    <title>Érika Silva | Beleza & Progressiva</title>
 
-        .description {
-            font-size: 1.05rem;
-            color: #d1d1d1;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 16px 24px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
 
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn-whatsapp {
-            background-color: #25d366;
-            color: #ffffff;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-        }
-
-        .btn-instagram {
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            color: #ffffff;
-            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.3);
-        }
-
-        .slogan {
-            font-size: 1.1rem;
-            color: #e8b4b8;
-            font-style: italic;
-            font-weight: 500;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div class="card">
-        <h1>Vivi Chagas</h1>
-        <h2>Nail Designer</h2>
-        
-        <p class="description">
-            Banho de gel e alongamentos de unhas personalizadas. Resistência e elegância em cada detalhe! 💅✨
-        </p>
-        
-        <div class="buttons">
-            <a href="https://wa.me/5569993858055" target="_blank" class="btn btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> AGENDAR PELO WHATSAPP
-            </a>
-            
-            <a href="https://instagram.com/vivianevicente" target="_blank" class="btn btn-instagram">
-                <i class="fab fa-instagram"></i> @vivianevicente
-            </a>
+    <!-- =====================================================
+         MENU LATERAL
+    ====================================================== -->
+
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+
+            <div class="sidebar-logo">
+                Érika <span>Silva</span>
+            </div>
+
+            <button
+                class="sidebar-close"
+                id="closeMenu"
+                aria-label="Fechar menu"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
         </div>
-        
-        <p class="slogan">Sua melhor versão começa aqui! 💕</p>
-    </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="#inicio">
+                <i class="fa-solid fa-house"></i>
+                Início
+            </a>
+
+            <a href="#sobre">
+                <i class="fa-solid fa-user"></i>
+                Sobre a profissional
+            </a>
+
+            <a href="#servicos">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                Serviços
+            </a>
+
+            <a href="#resultados">
+                <i class="fa-solid fa-images"></i>
+                Resultados
+            </a>
+
+            <a
+                href="https://wa.me/5549996601984"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+                Agendar horário
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <span>BELEZA & PROGRESSIVA</span>
+            <small>© 2026 Érika Silva</small>
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <!-- Vídeo de fundo -->
+
+            <video
+                class="hero-video"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+            >
+                <source src="video-apresentacao.mp4" type="video/mp4">
+            </video>
+
+            <!-- Camadas visuais -->
+
+            <div class="hero-overlay"></div>
+            <div class="hero-glow"></div>
+
+            <!-- Linha superior -->
+
+            <header class="top-bar">
+
+                <button
+                    class="circle-button menu-button"
+                    id="openMenu"
+                    aria-label="Abrir menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div class="top-actions">
+
+                    <button
+                        class="circle-button"
+                        id="pauseVideo"
+                        aria-label="Pausar vídeo"
+                    >
+                        <i class="fa-solid fa-pause"></i>
+                    </button>
+
+                    <a
+                        class="circle-button"
+                        href="https://instagram.com/erika_silveer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                </div>
+
+            </header>
+
+
+            <!-- Conteúdo -->
+
+            <div class="hero-content">
+
+                <div class="brand-mark">
+                    <span>♔</span>
+                </div>
+
+                <h1>
+                    Érika
+                    <strong>Silva</strong>
+                </h1>
+
+                <div class="hero-line"></div>
+
+                <p class="hero-subtitle">
+                    BELEZA & PROGRESSIVA
+                </p>
+
+                <p class="hero-description">
+                    Realce sua beleza com cabelos mais lisos,
+                    saudáveis e cheios de brilho.
+                    Atendimento personalizado para realçar
+                    a sua melhor versão.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        class="btn-primary"
+                        href="https://wa.me/5549996601984"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        <span>
+                            Agendar pelo WhatsApp
+                        </span>
+                    </a>
+
+
+                    <a
+                        class="instagram-link"
+                        href="https://instagram.com/erika_silveer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+
+                        <span>@erika_silveer</span>
+                    </a>
+
+                </div>
+
+
+                <button
+                    class="options-button"
+                    id="optionsButton"
+                    aria-expanded="false"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                    <span>Abrir mais opções</span>
+                </button>
+
+
+                <div class="options-menu" id="optionsMenu">
+
+                    <a
+                        href="#sobre"
+                        class="option-item"
+                    >
+                        <i class="fa-solid fa-user"></i>
+                        Sobre Érika
+                    </a>
+
+                    <a
+                        href="#servicos"
+                        class="option-item"
+                    >
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        Serviços
+                    </a>
+
+                    <a
+                        href="#resultados"
+                        class="option-item"
+                    >
+                        <i class="fa-solid fa-images"></i>
+                        Resultados
+                    </a>
+
+                    <a
+                        href="https://wa.me/5549996601984"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="option-item"
+                    >
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Falar no WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Indicador -->
+
+            <div class="scroll-indicator">
+                <span></span>
+                <small>ROLE PARA VER MAIS</small>
+            </div>
+
+
+            <!-- WhatsApp flutuante -->
+
+            <a
+                class="floating-whatsapp"
+                href="https://wa.me/5549996601984"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Agendar pelo WhatsApp"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+        </section>
+
+
+        <!-- =====================================================
+             SOBRE
+        ====================================================== -->
+
+        <section class="section about" id="sobre">
+
+            <div class="section-label">
+                SOBRE
+            </div>
+
+            <h2>
+                Beleza que começa
+                <span>no cuidado.</span>
+            </h2>
+
+            <p>
+                Sou Érika Silva, profissional especializada em
+                progressiva e alisamento capilar. Com 9 anos de
+                experiência, trabalho com técnicas profissionais,
+                produtos de qualidade e atendimento personalizado.
+            </p>
+
+            <div class="experience">
+
+                <strong>9</strong>
+
+                <div>
+                    <span>ANOS</span>
+                    <small>DE EXPERIÊNCIA</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SERVIÇOS
+        ====================================================== -->
+
+        <section class="section services" id="servicos">
+
+            <div class="section-label">
+                SERVIÇOS
+            </div>
+
+            <h2>
+                Cuidados para
+                <span>seus cabelos.</span>
+            </h2>
+
+
+            <div class="services-grid">
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+
+                    <span>01</span>
+
+                    <h3>Progressiva</h3>
+
+                    <p>
+                        Cabelos mais lisos, alinhados,
+                        leves e livres do frizz.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+
+                    <span>02</span>
+
+                    <h3>Hidratação</h3>
+
+                    <p>
+                        Tratamento profundo para fios
+                        macios, hidratados e brilhantes.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+
+                    <span>03</span>
+
+                    <h3>Escova</h3>
+
+                    <p>
+                        Mais brilho, movimento e
+                        acabamento impecável.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+
+                    <span>04</span>
+
+                    <h3>Tratamentos</h3>
+
+                    <p>
+                        Reconstrução e nutrição para
+                        cabelos fortes e bonitos.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             RESULTADOS
+        ====================================================== -->
+
+        <section class="section results" id="resultados">
+
+            <div class="section-label">
+                TRANSFORMAÇÕES
+            </div>
+
+            <h2>
+                Resultados que
+                <span>falam por si.</span>
+            </h2>
+
+            <div class="results-grid">
+
+                <article class="result-card">
+
+                    <div class="before-after">
+
+                        <div>
+                            <span>ANTES</span>
+                            <img src="antes1.jpg" alt="Resultado antes">
+                        </div>
+
+                        <div>
+                            <span>DEPOIS</span>
+                            <img src="depois1.jpg" alt="Resultado depois">
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="result-card">
+
+                    <div class="before-after">
+
+                        <div>
+                            <span>ANTES</span>
+                            <img src="antes2.jpg" alt="Resultado antes">
+                        </div>
+
+                        <div>
+                            <span>DEPOIS</span>
+                            <img src="depois2.jpg" alt="Resultado depois">
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="result-card">
+
+                    <div class="before-after">
+
+                        <div>
+                            <span>ANTES</span>
+                            <img src="antes3.jpg" alt="Resultado antes">
+                        </div>
+
+                        <div>
+                            <span>DEPOIS</span>
+                            <img src="depois3.jpg" alt="Resultado depois">
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             DIFERENCIAIS
+        ====================================================== -->
+
+        <section class="section highlights">
+
+            <div class="highlight">
+
+                <i class="fa-solid fa-gem"></i>
+
+                <h3>Qualidade</h3>
+
+                <p>
+                    Produtos selecionados para
+                    cuidar dos seus fios.
+                </p>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <i class="fa-solid fa-star"></i>
+
+                <h3>Personalizado</h3>
+
+                <p>
+                    Cada atendimento pensado
+                    para você.
+                </p>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <h3>Cuidado</h3>
+
+                <p>
+                    Técnica, carinho e atenção
+                    em cada detalhe.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA FINAL
+        ====================================================== -->
+
+        <section class="final-cta">
+
+            <div class="section-label">
+                SEU MOMENTO
+            </div>
+
+            <h2>
+                Sua melhor versão
+                <span>começa aqui.</span>
+            </h2>
+
+            <p>
+                Agende seu horário e venha conhecer
+                o trabalho da Érika Silva.
+            </p>
+
+            <a
+                href="https://wa.me/5549996601984"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+                Agendar meu horário
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            Érika <span>Silva</span>
+        </div>
+
+        <p>
+            BELEZA & PROGRESSIVA
+        </p>
+
+        <div class="footer-social">
+
+            <a
+                href="https://instagram.com/erika_silveer"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+            >
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+                href="https://wa.me/5549996601984"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+        </div>
+
+        <small>
+            © 2026 Érika Silva — Todos os direitos reservados.
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
-```
-
----
-
-### O que foi incluído no site:
-* **Identificação:** Nome Vivi Chagas e a profissão Nail Designer.
-* **Serviços em Destaque:** Banho de gel e alongamentos de unhas personalizadas.
-* **Proposta de Valor:** "Resistência e elegância em cada detalhe!".
-* **Links Diretos:** Botão de agendamento via WhatsApp (`(69) 99385-8055`) e atalho para o perfil do Instagram (`@vivianevicente`).
-* **Slogan:** "Sua melhor versão começa aqui! 💕".
-
-💅 *Gostaria que eu criasse uma apresentação de slides profissional ou um folheto em PDF com o portfólio de serviços no painel Studio?*
